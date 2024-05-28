@@ -14,9 +14,10 @@ const speed = document.getElementById("speed");
 
 
 const getPokemon = async ()=>{
-    try{
 const searchNameOrId = searchInput.value.toLowerCase();
+    try{
 const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${searchNameOrId}`);
+
 const data = await response.json();
 types.innerHTML = data.types.map(obj => `<span class="type ${obj.type.name}">${obj.type.name}</span>`).join("");
 
@@ -33,9 +34,9 @@ defense.textContent = data.stats[2].base_stat;
 specialAttack.textContent = data.stats[3].base_stat;
 specialDefense.textContent = data.stats[4].base_stat;
 speed.textContent = data.stats[5].base_stat;
-searchInput.textContent = "";
+searchInput.value = "";
 }
-catch (err) {
+    catch (err) {
     resetDisplay();
     alert("Pokémon not found");
     console.log(`Pokémon not found: ${err}`);
@@ -43,9 +44,9 @@ catch (err) {
 }; 
 
 const resetDisplay = () =>{
+    const sprite = document.getElementById("sprite");
     if(sprite)  sprite.remove();
-
-    pokemonName.textContent = `${data.name.toUpperCase()}`;
+    pokemonName.textContent = "";
 pokemonId.textContent = "";
 weight.textContent = "";
 height.textContent = "";
@@ -56,7 +57,7 @@ defense.textContent = "";
 specialAttack.textContent = "";
 specialDefense.textContent = "";
 speed.textContent = "";
-}
+};
 
   
 
