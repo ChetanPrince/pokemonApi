@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Search App</title>
+    <link rel="stylesheet" href="style.css" class="style">
+   
+
+</head>
+<body>
+    <!-- search tab container with button tab -->
+<div id="search-tab-container">
+    <label for="search-input">Enter Pokemon name or Id</label><br>
+    <input type="text" id="search-input"/>
+    <button id="search-button">
+    </button>
+</div>
+<div id="image-container"></div>
+
+
+       
+    <!-- name id container -->
+<div id="name-id">
+    <h2>PokeMon name : <span id="pokemon-name"></span></h2>
+    <h4>Pokemon id: <span id="pokemon-id"></span></h4>
+    <p><span id="types"></span></p>
+    
+    
+    
+    <!-- stat container -->
+    <table id="container">
+        <tr class="tabs"><td class="main">weight</td><td id="weight"></td></tr>
+        <tr class="tabs"><td class="main">height</td><td id="height"></td></tr>
+        <tr class="tabs"><td class="main">hp</td><td id="hp"></td></tr>
+        <tr class="tabs"><td class="main">attack</td><td id="attack"></td></tr>
+        <tr class="tabs"><td class="main">defense</td><td id="defense"></td></tr>
+        <tr class="tabs"><td class="main"> special attack</td><td id="special-attack"></td></tr>
+        <tr class="tabs"><td class="main">special defense</td><td id="special-defense"></td></tr>
+        <tr class="tabs"><td class="main">speed</td><td id="speed"></td></tr>
+    </table>
+</div>
+    
+    
+    
+
+<script src="scripts.js"></script>
+
+
+
+</body>
+</html>
