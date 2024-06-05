@@ -61,7 +61,7 @@
     height: 25px;
     border:none;
     border-radius: 5px;
-    box-shadow: 2px 2px #888888 ;
+    box-shadow: 4px 4px #888888 ;
     margin-bottom: 50px;
   }
   input:hover{
@@ -76,7 +76,7 @@
     background-color: #ffffff;
     width: 80%;
     margin-left: 10%;
-    margin-top: -100px;
+    margin-top: -90px;
     color: black;
     padding-top: 105px;
     padding-bottom: 20px;
